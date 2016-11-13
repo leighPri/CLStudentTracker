@@ -1,0 +1,58 @@
+﻿@model IEnumerable<CL2016StudentTracker.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@*<h2>Students</h2>*@
+
+<div class="container">
+    @*<div class="container">
+    <a href="@Url.Action("Summary")"><span class="btn pull-right">Program Stats</span></a>
+    </div>*@
+    <div class="container student-table">
+        <div class="row column-headers">
+            <div class="col-xs-3">Name</div>
+            <div class="col-xs-2">Email</div>
+            <div class="col-sm-2 hidden-xs hidden-sm">Session</div>
+            <div class="col-xs-2 hidden-xs hidden-sm">Track</div>
+            <div class="col-sm-1 hidden-xs hidden-sm">Night</div>
+            <div class="col-sm-1 hidden-xs hidden-sm">Status</div>
+            <div class="col-sm-1 hidden-xs hidden-sm">Absences</div>
+        </div>
+
+        @foreach (var item in Model)
+                {
+            <a href="@Url.Action("Details", new { id = item.StudentID })">
+                <div class="row student-row">
+                    <div class="col-xs-3">
+                        @Html.DisplayFor(modelItem => item.FullName)
+                    </div>
+                    <div class="col-xs-2">
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </div>
+                    <div class="col-sm-2 hidden-xs hidden-sm">
+                        @Html.DisplayFor(modelItem => item.Session)
+                    </div>
+                    <div class="col-xs-2 hidden-xs hidden-sm">
+                        @Html.DisplayFor(modelItem => item.CurrentTrack)
+                    </div>
+                    <div class="col-sm-1 hidden-xs hidden-sm">
+                        @Html.DisplayFor(modelItem => item.MeetupDay)
+                    </div>
+                    <div class="col-sm-1 hidden-xs hidden-sm">
+                        @Html.DisplayFor(modelItem => item.CurrentStatus)
+                    </div>
+                    <div class="col-sm-1 hidden-xs hidden-sm">
+                        @Html.DisplayFor(modelItem => item.Absences)
+                    </div>
+                </div>
+            </a>
+        }
+
+        <div class="container row" id="create-btn">
+            <a href="@Url.Action("Create")"><span class="btn">Add Student</span></a>
+            @*<span class="btn pull-right" id="all-stats">Program Stats</span>*@
+        </div>
+    </div>
+</div>

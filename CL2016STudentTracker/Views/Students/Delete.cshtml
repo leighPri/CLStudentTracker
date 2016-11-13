@@ -1,0 +1,328 @@
+﻿@model CL2016StudentTracker.Models.Student
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Veteran)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Veteran)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WelcomeMessageSent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WelcomeMessageSent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConductSigned)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConductSigned)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreworkStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreworkStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Session)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Session)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentTrack)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentTrack)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MeetupDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MeetupDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TreehouseStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TreehouseStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Absences)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Absences)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstSession)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstSession)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RestartSession)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RestartSession)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FeGradDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FeGradDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FsjsGradDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FsjsGradDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhpGradDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhpGradDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AndroidGradDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AndroidGradDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IosGradDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IosGradDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RorGradDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RorGradDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CsharpGradDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CsharpGradDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResumeRewrite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResumeRewrite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LeveragingLinkedin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeveragingLinkedin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImpressiveInterviewing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImpressiveInterviewing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoteworthyNetworking)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoteworthyNetworking)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LinkedinGradDirectory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LinkedinGradDirectory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OneOnOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OneOnOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DemoVideo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DemoVideo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostGradSurveySent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostGradSurveySent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsHired)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsHired)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LinkedinURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LinkedinURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TreehouseURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TreehouseURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GithubURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GithubURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

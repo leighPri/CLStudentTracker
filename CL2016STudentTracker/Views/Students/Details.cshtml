@@ -1,0 +1,90 @@
+﻿@model CL2016StudentTracker.Models.Student
+    
+@{
+    ViewBag.Title = "Details";
+}
+
+<p>@Html.ActionLink("Back to List", "Index")</p>
+<div class="container">
+    <h2 class="pull-left">@Html.DisplayFor(model => model.FullName)</h2>
+    <a href="@Url.Action("Edit", new { id = Model.StudentID })"><span class="btn pull-right">Edit</span></a>
+</div>
+
+<div class="clearfix">
+    <hr />
+    <div class="container">
+        <div class="row massive-category">
+            <div class="col-md-6 lg-category" id="perosnal-info-1">
+                <div class="row">
+                    <div class="col-md-4"><h4>@Html.DisplayNameFor(model => model.Email)</h4><br /><p class="display-value">@Html.DisplayFor(model => model.Email)</p></div><div class="col-md-4"><h4>@Html.DisplayNameFor(model => model.SecondEmail)</h4><br /><p class="display-value">@Html.DisplayFor(model => model.SecondEmail)</p></div><div class="col-md-4"><h4>@Html.DisplayNameFor(model => model.Veteran)</h4>@Html.DisplayFor(model => model.Veteran)</div>
+                </div>
+
+                <div class="row"><div class="col-md-4"><h4>@Html.DisplayNameFor(model => model.LinkedinURL)</h4><br /><p class="display-value">@Html.DisplayFor(model => model.LinkedinURL)</p></div><div class="col-md-4"><h4>@Html.DisplayNameFor(model => model.GithubURL)</h4><br /><p class="display-value">@Html.DisplayFor(model => model.GithubURL)</p></div><div class="col-md-4"><h4>@Html.DisplayNameFor(model => model.TreehouseURL)</h4><br /><p class="display-value">@Html.DisplayFor(model => model.TreehouseURL)</p></div></div>
+
+                <div class="row">
+                    <div class="col-md-4"><h4>@Html.DisplayNameFor(model => model.IsHired)</h4>@Html.DisplayFor(model => model.IsHired)</div><div class="col-md-4"><h4>@Html.DisplayNameFor(model => model.JobTitle)</h4><br /><p class="display-value">@Html.DisplayFor(model => model.JobTitle)</p></div><div class="col-md-4"><h4>@Html.DisplayNameFor(model => model.Employer)</h4><br /><p class="display-value">@Html.DisplayFor(model => model.Employer)</p></div>
+                </div>
+            </div>
+
+            <div class="col-md-6 lg-category" id="current-session">
+                <div class="row">
+                    <div class="col-md-5"><h4>@Html.DisplayNameFor(model => model.CurrentTrack)</h4><br /><h4 class="display-value">@Html.DisplayFor(model => model.CurrentTrack)</h4></div><div class="col-md-3"><h4>@Html.DisplayNameFor(model => model.Session)</h4><br /><h4 class="display-value">@Html.DisplayFor(model => model.Session)</h4></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"><h4>@Html.DisplayNameFor(model => model.MeetupDay)</h4><br /><h4 class="display-value">@Html.DisplayFor(model => model.MeetupDay)</h4></div><div class="col-md-4"><h4>@Html.DisplayNameFor(model => model.CurrentStatus)</h4><br /><h4 class="display-value">@Html.DisplayFor(model => model.CurrentStatus)</h4></div><div class="col-md-2"><h4>@Html.DisplayNameFor(model => model.Absences)</h4><br /><h4 class="display-value">@Html.DisplayFor(model => model.Absences)</h4></div>
+                </div>
+            </div>
+        </div>
+        <hr />
+
+        <div class="row massive-category">
+            <div class="col-md-6 lg-category" id="prev-sessions">
+                <div class="row" id="tracks">
+                    <div class="row"><div class="col-xs-6"><h4>Tracks</h4></div><div class="col-xs-6"><h4>Grad Date</h4></div></div>
+                    <div class="row"><div class="col-xs-6">@Html.DisplayNameFor(model => model.FsjsGradDate)</div><div class="col-xs-6">@Html.DisplayFor(model => model.FsjsGradDate)</div></div>
+                    <div class="row"><div class="col-xs-6">@Html.DisplayNameFor(model => model.CsharpGradDate)</div><div class="col-xs-6">@Html.DisplayFor(model => model.CsharpGradDate)</div></div>
+                    <div class="row"><div class="col-xs-6">@Html.DisplayNameFor(model => model.PhpGradDate)</div><div class="col-xs-6">@Html.DisplayFor(model => model.PhpGradDate)</div>
+                </div>
+                </div>
+                <div class="row" id="old-tracks">
+                    <div class="row"><div class="col-xs-6">@Html.DisplayNameFor(model => model.FeGradDate)</div><div class="col-xs-6">@Html.DisplayFor(model => model.FeGradDate)</div></div>
+                    <div class="row"><div class="col-xs-6">@Html.DisplayNameFor(model => model.RorGradDate)</div><div class="col-xs-6">@Html.DisplayFor(model => model.RorGradDate)</div></div>
+                    <div class="row"><div class="col-xs-6">@Html.DisplayNameFor(model => model.AndroidGradDate)</div><div class="col-xs-6">@Html.DisplayFor(model => model.AndroidGradDate)</div></div>
+                    <div class="row"><div class="col-xs-6">@Html.DisplayNameFor(model => model.IosGradDate)</div><div class="col-xs-6">@Html.DisplayFor(model => model.IosGradDate)</div></div>
+                </div>
+            </div>
+
+            <div class="col-md-6 lg-category">
+                <div class="row">
+                    <div class="col-md-4"><h4>@Html.DisplayNameFor(model => model.FirstSession)</h4><br /><h4 class="display-value">@Html.DisplayFor(model => model.FirstSession)</h4></div><div class="col-md-4"><h4>@Html.DisplayNameFor(model => model.RestartSession)</h4><br /><h4 class="display-value">@Html.DisplayFor(model => model.RestartSession)</h4></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5"><h5>@Html.DisplayNameFor(model => model.WelcomeMessageSent)</h5>@Html.DisplayFor(model => model.WelcomeMessageSent)</div><div class="col-md-5"><h5>@Html.DisplayNameFor(model => model.ConductSigned)</h5>@Html.DisplayFor(model => model.ConductSigned)</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5"><h5>@Html.DisplayNameFor(model => model.PreworkStatus)</h5>@Html.DisplayFor(model => model.PreworkStatus)</div><div class="col-md-5"><h5>@Html.DisplayNameFor(model => model.TreehouseStatus)</h5>@Html.DisplayFor(model => model.TreehouseStatus)</div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row massive-category">
+            <div class="col-md-12 lg-category">
+                <div class="col-md-3"><h5>@Html.DisplayNameFor(model => model.ResumeRewrite)</h5>@Html.DisplayFor(model => model.ResumeRewrite)</div>
+                <div class="col-md-3"><h5>@Html.DisplayNameFor(model => model.LeveragingLinkedin)</h5>@Html.DisplayFor(model => model.LeveragingLinkedin)</div>
+                <div class="col-md-3"><h5>@Html.DisplayNameFor(model => model.ImpressiveInterviewing)</h5>@Html.DisplayFor(model => model.ImpressiveInterviewing)</div>
+                <div class="col-md-3"><h5>@Html.DisplayNameFor(model => model.NoteworthyNetworking)</h5>@Html.DisplayFor(model => model.NoteworthyNetworking)</div>
+                <div class="col-md-3"><h5>@Html.DisplayNameFor(model => model.LinkedinGradDirectory)</h5>@Html.DisplayFor(model => model.LinkedinGradDirectory)</div><div class="col-md-3"><h5>@Html.DisplayNameFor(model => model.OneOnOne)</h5>@Html.DisplayFor(model => model.OneOnOne)</div><div class="col-md-3"><h5>@Html.DisplayNameFor(model => model.DemoVideo)</h5>@Html.DisplayFor(model => model.DemoVideo)</div><div class="col-md-3"><h5>@Html.DisplayNameFor(model => model.PostGradSurveySent)</h5>@Html.DisplayFor(model => model.PostGradSurveySent)</div>
+            </div>
+        </div>
+        <hr />
+
+        <div class="row">
+            <h4>@Html.DisplayNameFor(model => model.Notes)</h4>
+        </div>
+
+        <div class="row">
+            @Html.DisplayFor(model => model.Notes)
+        </div>
+    </div>
+</div>
+
