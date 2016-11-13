@@ -1,3 +1,0 @@
-# Ignore database files
-CL2016StudentTracker/App_Data/CL2016StudentTracker.Models.StudentContext.mdf
-CL2016StudentTracker/App_Data/CL2016StudentTracker.Models.StudentContext_log.ldf
